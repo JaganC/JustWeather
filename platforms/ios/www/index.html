@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="weatherApp">
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Just Weather</title>
+    </head>
+    <body>
+        <div ng-controller="appController" ng-init="initializeTabs()">
+          <section >
+            <header class="headerStyle">
+              {{cityName}}, {{country}}
+            </header>
+            <div class="dateSection">
+              <span>{{day}}</span>
+              <span>{{date}}</span>
+              <span>{{month}}</span>
+            </div>
+            <div class="descSection">
+              {{desc}}
+            </div>
+            <div class="imageSection">
+              <div class="tempStyle">{{average}}&deg</div>
+              <div class="iconStyle" ng-class="image"></div>
+            </div>
+            <div class="contentStyle">
+                <div class="content"><div class="rightAlign">Max:</div> <div class="leftAlign">{{max}}&deg</div></div>
+                <div class="content"><div class="rightAlign">Min:</div> <div class="leftAlign">{{min}}&deg</div></div>
+                <div class="content topAlign"><div class="rightAlign">Humidity:</div> <div class="leftAlign">{{humidity}}%</div></div>
+                <div class="content topAlignPressure"><div class="rightAlign">Pressure:</div> <div class="leftAlign">{{pressure}} hPa</div></div>
+              <div class="content topAlignSpeed"><div class="rightAlign">Wind Speed:</div> <div class="leftAlign">{{speed}} m/s</div></div>
+              <div class="content topAlignSpeed"><div class="rightAlign">Degree:</div> <div class="leftAlign">{{degree}}</div></div>
+              <div class="content topAlignClouds"><div class="rightAlign">Clouds:</div> <div class="leftAlign">{{clouds}} %</div></div>
+
+            </div>
+          </section>
+          <footer>
+            <ul class="tabSectionStyle">
+              <li ng-repeat="data in weatherData" ng-if="!$first">
+                <p   class="tabStyle" ng-style="configIcon(data.weather[0].icon)" ng-click="configureData($index)">{{data.day}}
+                <span class="alignTextMax">{{data.temp.max}}</span>
+                <span class="alignTextMin">{{data.temp.min}}</span>
+              </p>
+              </li>
+            </ul>
+          </footer>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
