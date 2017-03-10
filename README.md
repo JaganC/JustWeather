@@ -7,6 +7,7 @@
     
 # Installation
    To run this application in iOS simulator you need xCode installed in Mac OS. Also make sure you downloaded the simulator in xCode.
+   
    To run this application in Android simulator or device you need Android SDK or Android Studio installed in PC.
   
 # How to run 
@@ -17,10 +18,10 @@
   You may create/choose a simulator from AVD( Android Virtual Device) or choose a Developer Options enabled Android device to run the application.
 
 # What next?
-  As i got only 4 hours of time, the functionalities are limited in this application.
-  I would have provided a option to change and add user locations.
+  As i got only 4 hours of time, the functionalities are limited in this application. 
+  I would have provided a option to change and add user locations. 
   Although it is responsive, considering the time frame I focused more on mobile UI. 
-  If more time is given would have lot more justice to UI specially for web.
+  If more time is given would have done lot more justice to Web UI. 
   Would also like to include forecast for hour based, customised notifications for User.
   
 
